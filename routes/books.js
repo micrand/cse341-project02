@@ -13,11 +13,11 @@ router.get('/', bookController.getAll);
 router.get('/:id', bookController.getSingle);
 
 // post and put
-router.post('/', isAuthenticated, bookController.createBook);
+router.post('/', bookController.createBook);
 
-router.put('/:id', isAuthenticated, bookController.updateBook);
+router.put('/:id', bookController.updateBook);
 
 // delete
-router.delete('/:id', isAuthenticated, bookController.deleteBook);
+router.delete('/:id', bookController.deleteBook);
 
 module.exports = router;
